@@ -9,8 +9,4 @@ class FontTheme {
     fontWeight: FontWeight.w700,
     color: ColorTheme.scienceBlue,
   );
-
-
-
-
 }
