@@ -4,5 +4,8 @@
   "scanFilePrivacy2": "Điều khoản dịch vụ và Chính sách bảo mật. ",
   "scanFilePrivacy3": "Vui lòng không gửi bất kỳ thông tin cá nhân nào. VirusTotal không chịu trách nhiệm về nội dung gửi của bạn.",
    "uploadFileFailed": "Tải tệp tin thất bại",
-   "uploadFileFailedMessage": "Kiểm tra mạng hoặc tệp tin của bạn!"
+   "uploadFileFailedMessage": "Kiểm tra mạng hoặc tệp tin của bạn!",
+   "urlOfWebsite": "Đường dẫn của trang web",
+   "search": "Tìm kiếm",
+   "ipAddress": "Địa chỉ IP"
 }

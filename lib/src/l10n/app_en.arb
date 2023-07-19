@@ -4,6 +4,9 @@
   "scanFilePrivacy2": "Terms of Service and Privacy Policy. ",
   "scanFilePrivacy3": "Please do not submit any personal information. VirusTotal is not responsible for the contents of your submission.",
   "uploadFileFailed": "Upload file Failed",
-  "uploadFileFailedMessage": "Check your Internet or your file again!"
+  "uploadFileFailedMessage": "Check your Internet or your file again!",
+  "urlOfWebsite": "URL of the website",
+  "search": "Search",
+  "ipAddress": "IP address"
 
 }

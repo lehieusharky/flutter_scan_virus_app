@@ -21,4 +21,13 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get uploadFileFailedMessage => 'Kiểm tra mạng hoặc tệp tin của bạn!';
+
+  @override
+  String get urlOfWebsite => 'Đường dẫn của trang web';
+
+  @override
+  String get search => 'Tìm kiếm';
+
+  @override
+  String get ipAddress => 'Địa chỉ IP';
 }

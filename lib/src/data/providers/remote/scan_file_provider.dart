@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:injectable/injectable.dart';
+import 'package:virusscanapp/src/utils/end_points.dart';
 import 'package:virusscanapp/src/utils/http_utils.dart';
 
 abstract class ScanFileProvider {
@@ -12,7 +13,7 @@ class ScanFileProviderImpl extends ScanFileProvider {
   Future<String> getIdScanFile({required File file}) async {
     try {
       final HttpResponse response = await HttpHelper.uploadFile(
-        "https://www.virustotal.com/api/v3/files",
+        EndPoints.apiScanFile,
         file: file,
       );
       final String id = response.body['data']['id'];

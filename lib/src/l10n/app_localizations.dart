@@ -128,6 +128,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Check your Internet or your file again!'**
   String get uploadFileFailedMessage;
+
+  /// No description provided for @urlOfWebsite.
+  ///
+  /// In en, this message translates to:
+  /// **'URL of the website'**
+  String get urlOfWebsite;
+
+  /// No description provided for @search.
+  ///
+  /// In en, this message translates to:
+  /// **'Search'**
+  String get search;
+
+  /// No description provided for @ipAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'IP address'**
+  String get ipAddress;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
