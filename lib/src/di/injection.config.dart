@@ -15,10 +15,14 @@ import 'package:virusscanapp/src/data/providers/local/file_picker_provider.dart'
     as _i3;
 import 'package:virusscanapp/src/data/providers/remote/scan_file_provider.dart'
     as _i5;
+import 'package:virusscanapp/src/data/providers/remote/scan_url_provider.dart'
+    as _i7;
 import 'package:virusscanapp/src/data/repositories/local/file_picker_repo.dart'
     as _i4;
 import 'package:virusscanapp/src/data/repositories/remote/scan_file_repo.dart'
     as _i6;
+import 'package:virusscanapp/src/data/repositories/remote/scan_url_repo.dart'
+    as _i8;
 
 extension GetItInjectableX on _i1.GetIt {
   // initializes the registration of main-scope dependencies inside of GetIt
@@ -35,6 +39,8 @@ extension GetItInjectableX on _i1.GetIt {
     gh.factory<_i4.FilePickerRepository>(() => _i4.FilePickerRepositoryImpl());
     gh.factory<_i5.ScanFileProvider>(() => _i5.ScanFileProviderImpl());
     gh.factory<_i6.ScanFileRepository>(() => _i6.ScanFileRepositoryImpl());
+    gh.factory<_i7.ScanUrlProvider>(() => _i7.ScanUrlProviderImpl());
+    gh.factory<_i8.ScanUrlRepository>(() => _i8.ScanUrlRepositoryImpl());
     return this;
   }
 }

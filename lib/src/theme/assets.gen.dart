@@ -12,9 +12,8 @@ import 'package:flutter/widgets.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
-  /// File path: assets/icons/search_icon.png
-  AssetGenImage get searchIcon =>
-      const AssetGenImage('assets/icons/search_icon.png');
+  /// File path: assets/icons/ip_icon.png
+  AssetGenImage get ipIcon => const AssetGenImage('assets/icons/ip_icon.png');
 
   /// File path: assets/icons/upload_file_icon.png
   AssetGenImage get uploadFileIcon =>
@@ -24,7 +23,7 @@ class $AssetsIconsGen {
   AssetGenImage get urlIcon => const AssetGenImage('assets/icons/url_icon.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [searchIcon, uploadFileIcon, urlIcon];
+  List<AssetGenImage> get values => [ipIcon, uploadFileIcon, urlIcon];
 }
 
 class Assets {

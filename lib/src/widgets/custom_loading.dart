@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:virusscanapp/src/theme/color_theme.dart';
 
 class CustomLoadingWidget extends StatelessWidget {

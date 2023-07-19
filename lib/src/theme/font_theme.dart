@@ -27,13 +27,13 @@ class FontTheme {
     fontWeight: FontWeight.w500,
     color: ColorTheme.shark,
   );
-  static TextStyle red12W400Poppins = GoogleFonts.poppins(
+  static TextStyle red12W400Inter = GoogleFonts.inter(
     fontSize: 12.sp,
     fontWeight: FontWeight.w400,
     color: ColorTheme.red,
   );
 
-  static TextStyle shark12W500Poppins = GoogleFonts.poppins(
+  static TextStyle shark12W500Inter = GoogleFonts.inter(
     fontSize: 12.sp,
     fontWeight: FontWeight.w500,
     color: ColorTheme.shark,

@@ -21,4 +21,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get uploadFileFailedMessage => 'Check your Internet or your file again!';
+
+  @override
+  String get urlOfWebsite => 'URL of the website';
+
+  @override
+  String get search => 'Search';
+
+  @override
+  String get ipAddress => 'IP address';
 }
