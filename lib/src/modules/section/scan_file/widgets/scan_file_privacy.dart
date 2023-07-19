@@ -19,7 +19,7 @@ class ScanFilePrivacyWidget extends StatelessWidget {
                 style: FontTheme.shark15W500Inter),
             TextSpan(
                 text: AppLocalizations.of(context)!.scanFilePrivacy2,
-                style: FontTheme.scienceBlue15W700Inter),
+                style: FontTheme.scienceBlue17W700Inter),
             TextSpan(
                 text: AppLocalizations.of(context)!.scanFilePrivacy3,
                 style: FontTheme.shark15W500Inter),

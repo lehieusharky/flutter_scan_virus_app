@@ -14,9 +14,11 @@ import 'package:injectable/injectable.dart' as _i2;
 import 'package:virusscanapp/src/data/providers/local/file_picker_provider.dart'
     as _i3;
 import 'package:virusscanapp/src/data/providers/remote/scan_file_provider.dart'
+    as _i5;
+import 'package:virusscanapp/src/data/repositories/local/file_picker_repo.dart'
     as _i4;
 import 'package:virusscanapp/src/data/repositories/remote/scan_file_repo.dart'
-    as _i5;
+    as _i6;
 
 extension GetItInjectableX on _i1.GetIt {
   // initializes the registration of main-scope dependencies inside of GetIt
@@ -30,8 +32,9 @@ extension GetItInjectableX on _i1.GetIt {
       environmentFilter,
     );
     gh.factory<_i3.FilePickerProvider>(() => _i3.FilePickerProviderImpl());
-    gh.factory<_i4.ScanFileProvider>(() => _i4.ScanFileProviderImpl());
-    gh.factory<_i5.ScanFileRepository>(() => _i5.ScanFileRepositoryImpl());
+    gh.factory<_i4.FilePickerRepository>(() => _i4.FilePickerRepositoryImpl());
+    gh.factory<_i5.ScanFileProvider>(() => _i5.ScanFileProviderImpl());
+    gh.factory<_i6.ScanFileRepository>(() => _i6.ScanFileRepositoryImpl());
     return this;
   }
 }

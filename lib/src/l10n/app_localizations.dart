@@ -116,6 +116,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Please do not submit any personal information. VirusTotal is not responsible for the contents of your submission.'**
   String get scanFilePrivacy3;
+
+  /// No description provided for @uploadFileFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Upload file Failed'**
+  String get uploadFileFailed;
+
+  /// No description provided for @uploadFileFailedMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Check your Internet or your file again!'**
+  String get uploadFileFailedMessage;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

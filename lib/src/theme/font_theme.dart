@@ -16,6 +16,12 @@ class FontTheme {
     color: ColorTheme.scienceBlue,
   );
 
+  static TextStyle scienceBlue17W700Inter = GoogleFonts.inter(
+    fontSize: 17.sp,
+    fontWeight: FontWeight.w700,
+    color: ColorTheme.scienceBlue,
+  );
+
   static TextStyle shark15W500Inter = GoogleFonts.inter(
     fontSize: 15.sp,
     fontWeight: FontWeight.w500,

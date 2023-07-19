@@ -14,6 +14,7 @@ class ScanFileBloc extends Bloc<ScanFileEvent, ScanFileState> {
   }
 
   Future<void> _getId(ScanFileGetId event, Emitter<ScanFileState> emit) async {
+    emit(ScanFileLoading());
     try {
       String id = await scanFileRepository.getIdScanFile(file: event.file);
       emit(ScanFileGetIdSuccess(id: id));

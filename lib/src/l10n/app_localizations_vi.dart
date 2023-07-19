@@ -15,4 +15,10 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get scanFilePrivacy3 => 'Vui lòng không gửi bất kỳ thông tin cá nhân nào. VirusTotal không chịu trách nhiệm về nội dung gửi của bạn.';
+
+  @override
+  String get uploadFileFailed => 'Tải tệp tin thất bại';
+
+  @override
+  String get uploadFileFailedMessage => 'Kiểm tra mạng hoặc tệp tin của bạn!';
 }

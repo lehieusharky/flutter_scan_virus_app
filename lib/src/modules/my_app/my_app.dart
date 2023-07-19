@@ -3,7 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:virusscanapp/src/constants/text_constant.dart';
 import 'package:virusscanapp/src/l10n/app_localizations.dart';
-import 'package:virusscanapp/src/modules/home_page/page/home_page.dart';
+import 'package:virusscanapp/src/route/app_router.dart';
 import 'package:virusscanapp/src/theme/color_theme.dart';
 
 class MyApp extends StatelessWidget {
@@ -20,7 +20,10 @@ class MyApp extends StatelessWidget {
   }
 
   MaterialApp _buildMaterialApp(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerDelegate: AppRouter.router.routerDelegate,
+      routeInformationProvider: AppRouter.router.routeInformationProvider,
+      routeInformationParser: AppRouter.router.routeInformationParser,
       debugShowCheckedModeBanner: false,
       title: TextConstant.titleApp,
       theme: ThemeData(
@@ -38,7 +41,6 @@ class MyApp extends StatelessWidget {
         Locale(TextConstant.en),
         Locale(TextConstant.vi),
       ],
-      home: const HomePage(),
     );
   }
 }

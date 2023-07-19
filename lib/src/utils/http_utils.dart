@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -100,7 +101,14 @@ class HttpHelper {
       filename: basename(file.path),
     );
     final formData = FormData.fromMap({'file': uploadFile});
-    final response = await dio.post(url, data: formData);
+    final response = await dio.post(
+      url,
+      data: formData,
+      onSendProgress: (sentBytes, totalBytes) {
+        final progress = (sentBytes / totalBytes * 100).toInt();
+        log(progress.toString());
+      },
+    );
     return HttpResponse(
       body: response.data,
       headers: response.headers,
