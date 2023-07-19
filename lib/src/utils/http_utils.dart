@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:dio/dio.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:path/path.dart';
 import 'package:virusscanapp/src/utils/http_interceptor.dart';
 
@@ -24,17 +25,16 @@ class HttpResponse<T> {
 class HttpHelper {
   static Dio getDio() {
     Dio dio = Dio();
-    // TODO: move apiKey to .env file
-    dio.options.headers['x-apikey'] =
-    '2c8abdcd1eeb8377f75b168ed588c60e784b99a3c00f9c8893ee11983d92d584';
+    final apiKey = dotenv.get("API_KEY");
+    dio.options.headers['x-apikey'] = apiKey;
     dio.interceptors.add(DioInterceptor());
     return dio;
   }
 
   static Future<HttpResponse> get(
-      String url, {
-        Map<String, dynamic>? queryParameters,
-      }) async {
+    String url, {
+    Map<String, dynamic>? queryParameters,
+  }) async {
     final dio = HttpHelper.getDio();
     final Response response = await dio.get(
       url,
@@ -51,9 +51,9 @@ class HttpHelper {
   }
 
   static Future<HttpResponse> post(
-      String url, {
-        required FormData? data,
-      }) async {
+    String url, {
+    required FormData? data,
+  }) async {
     final dio = HttpHelper.getDio();
     final Response response = await dio.post(url, data: data);
     return HttpResponse(
