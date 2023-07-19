@@ -6,4 +6,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get uploadFile => 'Upload file';
+
+  @override
+  String get scanFilePrivacy1 => 'By submitting data above, you are agreeing to our ';
+
+  @override
+  String get scanFilePrivacy2 => 'Terms of Service and Privacy Policy. ';
+
+  @override
+  String get scanFilePrivacy3 => 'Please do not submit any personal information. VirusTotal is not responsible for the contents of your submission.';
+
+  @override
+  String get uploadFileFailed => 'Upload file Failed';
+
+  @override
+  String get uploadFileFailedMessage => 'Check your Internet or your file again!';
 }

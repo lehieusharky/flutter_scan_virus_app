@@ -33,7 +33,7 @@ class _CustomTabBarState extends State<CustomTabBar> {
       indicatorColor: ColorTheme.scienceBlue,
       tabs: widget.tabs,
       labelStyle: FontTheme.scienceBlue15W700Inter,
-      unselectedLabelStyle: FontTheme.shark15W500Poppins,
+      unselectedLabelStyle: FontTheme.shark15W500Inter,
     );
   }
 }

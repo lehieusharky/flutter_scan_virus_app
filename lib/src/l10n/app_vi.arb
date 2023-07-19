@@ -1,3 +1,8 @@
 {
-  "uploadFile": "Gửi file"
+  "uploadFile": "Gửi file",
+  "scanFilePrivacy1": "Bằng cách gửi dữ liệu ở trên, bạn đồng ý với chúng tôi ",
+  "scanFilePrivacy2": "Điều khoản dịch vụ và Chính sách bảo mật. ",
+  "scanFilePrivacy3": "Vui lòng không gửi bất kỳ thông tin cá nhân nào. VirusTotal không chịu trách nhiệm về nội dung gửi của bạn.",
+   "uploadFileFailed": "Tải tệp tin thất bại",
+   "uploadFileFailedMessage": "Kiểm tra mạng hoặc tệp tin của bạn!"
 }

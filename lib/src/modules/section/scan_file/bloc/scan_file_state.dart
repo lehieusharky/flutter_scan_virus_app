@@ -9,6 +9,8 @@ abstract class ScanFileState extends Equatable {
 
 class ScanFileInitial extends ScanFileState {}
 
+class ScanFileLoading extends ScanFileState {}
+
 class ScanFileGetIdSuccess extends ScanFileState {
   final String id;
 
