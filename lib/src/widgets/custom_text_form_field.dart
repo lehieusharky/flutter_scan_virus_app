@@ -110,7 +110,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         autofocus: widget.autoFocus ?? false,
         validator: widget.validator,
         textInputAction: widget.textInputAction,
-        style: FontTheme.shark15W500Poppins,
+        style: FontTheme.shark15W500Inter,
         autovalidateMode: widget.autoValidateMode,
         keyboardType: widget.keyboardType,
         onChanged: widget.onChanged,

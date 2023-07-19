@@ -98,6 +98,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Upload file'**
   String get uploadFile;
+
+  /// No description provided for @scanFilePrivacy1.
+  ///
+  /// In en, this message translates to:
+  /// **'By submitting data above, you are agreeing to our '**
+  String get scanFilePrivacy1;
+
+  /// No description provided for @scanFilePrivacy2.
+  ///
+  /// In en, this message translates to:
+  /// **'Terms of Service and Privacy Policy. '**
+  String get scanFilePrivacy2;
+
+  /// No description provided for @scanFilePrivacy3.
+  ///
+  /// In en, this message translates to:
+  /// **'Please do not submit any personal information. VirusTotal is not responsible for the contents of your submission.'**
+  String get scanFilePrivacy3;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

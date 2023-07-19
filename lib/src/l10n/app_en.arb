@@ -1,3 +1,7 @@
 {
-  "uploadFile": "Upload file"
+  "uploadFile": "Upload file",
+  "scanFilePrivacy1": "By submitting data above, you are agreeing to our ",
+  "scanFilePrivacy2": "Terms of Service and Privacy Policy. ",
+  "scanFilePrivacy3": "Please do not submit any personal information. VirusTotal is not responsible for the contents of your submission."
+
 }
