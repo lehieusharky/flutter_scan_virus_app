@@ -9,4 +9,28 @@ class FontTheme {
     fontWeight: FontWeight.w700,
     color: ColorTheme.scienceBlue,
   );
+
+  static TextStyle scienceBlue15W700Inter = GoogleFonts.inter(
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w700,
+    color: ColorTheme.scienceBlue,
+  );
+
+  static TextStyle shark15W500Poppins = GoogleFonts.poppins(
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w500,
+    color: ColorTheme.shark,
+  );
+  static TextStyle red12W400Poppins = GoogleFonts.poppins(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+    color: ColorTheme.red,
+  );
+
+  static TextStyle shark12W500Poppins = GoogleFonts.poppins(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w500,
+    color: ColorTheme.shark,
+  );
+
 }
