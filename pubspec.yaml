@@ -17,12 +17,18 @@ dependencies:
   injectable: ^2.1.2
   google_fonts: ^5.1.0
   flutter_screenutil: ^5.8.4
+  path: ^1.8.3
+  go_router: ^9.0.3
+  flutter_localizations:
+    sdk: flutter
+  intl: any
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
 flutter:
+  generate: true
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
