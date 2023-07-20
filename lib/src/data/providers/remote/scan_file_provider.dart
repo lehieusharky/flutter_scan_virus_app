@@ -8,7 +8,7 @@ abstract class ScanFileProvider {
 }
 
 @Injectable(as: ScanFileProvider)
-class ScanFileProviderImpl extends ScanFileProvider {
+class ScanFileProviderImpl implements ScanFileProvider {
   @override
   Future<String> getIdScanFile({required File file}) async {
     try {
