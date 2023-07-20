@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:virusscanapp/src/data/models/analysis_report/analysis_report_model.dart';
+import 'package:virusscanapp/src/data/models/detail_model.dart';
+import 'package:virusscanapp/src/data/models/detection_model.dart';
 import 'package:virusscanapp/src/data/models/summary_model.dart';
 import 'package:virusscanapp/src/l10n/app_localizations.dart';
 import 'package:virusscanapp/src/modules/analysis_report_page/bloc/analysis_report_bloc.dart';
@@ -85,8 +87,14 @@ class _AnalysisReportPageState extends State<AnalysisReportPage>
                             datetime: analysisReportModel.getDateTime,
                           ),
                         ),
-                        const DetectionSection(),
-                        const DetailsSection()
+                        DetectionSection(
+                          detection: DetectionModel(
+                              listAnalysisResult:
+                                  analysisReportModel.getListAnalysisResult),
+                        ),
+                        DetailsSection(
+                            detail: DetailModel(
+                                fileInfo: analysisReportModel.getFileInfo))
                       ],
                     ),
                   )

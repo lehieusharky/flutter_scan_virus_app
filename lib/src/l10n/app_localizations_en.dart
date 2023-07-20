@@ -45,4 +45,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get haveMaliciousNotification => ' security vendor flagged as malicious';
+
+  @override
+  String get copied => 'Copied';
 }

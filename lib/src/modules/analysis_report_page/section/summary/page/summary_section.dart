@@ -26,28 +26,30 @@ class _SummarySectionState extends State<SummarySection> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(height: 20.h),
-        ShowMaliciousWidget(malicious: widget.status.getMalicious),
-        SizedBox(
-          height: 400.h,
-          child: Stack(
-            alignment: Alignment.center,
-            children: [
-              CountErrorWidget(
-                malicious: widget.status.getMalicious,
-                total: widget.status.getTotal,
-              ),
-              ChartSummaryWidget(listStatus: _listStatus),
-            ],
+    return Scaffold(
+      body: Column(
+        children: [
+          SizedBox(height: 20.h),
+          ShowMaliciousWidget(malicious: widget.status.getMalicious),
+          SizedBox(
+            height: 400.h,
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                CountErrorWidget(
+                  malicious: widget.status.getMalicious,
+                  total: widget.status.getTotal,
+                ),
+                ChartSummaryWidget(listStatus: _listStatus),
+              ],
+            ),
           ),
-        ),
-        Text(
-          widget.status.datetime,
-          style: FontTheme.shark15W500Inter,
-        ),
-      ],
+          Text(
+            widget.status.datetime,
+            style: FontTheme.shark15W500Inter,
+          ),
+        ],
+      ),
     );
   }
 }

@@ -176,6 +176,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **' security vendor flagged as malicious'**
   String get haveMaliciousNotification;
+
+  /// No description provided for @copied.
+  ///
+  /// In en, this message translates to:
+  /// **'Copied'**
+  String get copied;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

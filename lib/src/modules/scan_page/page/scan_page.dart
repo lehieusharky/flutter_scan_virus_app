@@ -33,27 +33,29 @@ class _ScanPageState extends State<ScanPage> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        CustomTabBar(
-          tabController: _tabController,
-          tabs: const [
-            CustomTabChild(title: TextConstant.file),
-            CustomTabChild(title: TextConstant.url),
-            CustomTabChild(title: TextConstant.ipAddress),
-          ],
-        ),
-        Expanded(
-          child: TabBarView(
-            controller: _tabController,
-            children: [
-              const ScanFileSection(),
-              ScanUrlSection(),
-              ScanIPAddressSection(),
+    return Scaffold(
+      body: Column(
+        children: [
+          CustomTabBar(
+            tabController: _tabController,
+            tabs: const [
+              CustomTabChild(title: TextConstant.file),
+              CustomTabChild(title: TextConstant.url),
+              CustomTabChild(title: TextConstant.ipAddress),
             ],
           ),
-        )
-      ],
+          Expanded(
+            child: TabBarView(
+              controller: _tabController,
+              children: [
+                const ScanFileSection(),
+                ScanUrlSection(),
+                ScanIPAddressSection(),
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
