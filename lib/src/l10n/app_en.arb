@@ -7,6 +7,11 @@
   "uploadFileFailedMessage": "Check your Internet or your file again!",
   "urlOfWebsite": "URL of the website",
   "search": "Search",
-  "ipAddress": "IP address"
+  "ipAddress": "IP address",
+  "summary": "Summary",
+  "detection": "Detection",
+  "details": "Details",
+  "noMaliciousNotification": "No security vendors flagged as malicious",
+  "haveMaliciousNotification": " security vendor flagged as malicious"
 
 }

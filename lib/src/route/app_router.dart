@@ -14,13 +14,16 @@ class AppRouter {
       GoRoute(
         path: '/scan',
         builder: (context, state) => const ScanPage(),
+        routes: [
+          GoRoute(
+            path: 'analysis',
+            builder: (context, state) {
+              final String id = state.queryParameters["id"] ?? "";
+              return AnalysisReportPage(id: id);
+            },
+          ),
+        ],
       ),
-      GoRoute(
-          path: '/analysis',
-          builder: (context, state) {
-            final String id = state.queryParameters["id"] ?? "";
-            return AnalysisReportPage(id: id);
-          }),
     ],
   );
 }

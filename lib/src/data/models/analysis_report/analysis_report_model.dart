@@ -1,5 +1,7 @@
 import 'package:virusscanapp/src/data/models/analysis_report/data.dart';
 import 'package:virusscanapp/src/data/models/analysis_report/meta.dart';
+import 'package:virusscanapp/src/data/models/analysis_report/stats.dart';
+import 'package:virusscanapp/src/utils/date_time_utils.dart';
 
 class AnalysisReportModel {
   Meta? meta;
@@ -14,4 +16,9 @@ class AnalysisReportModel {
     meta = json['meta'] != null ? Meta.fromJson(json['meta']) : null;
     data = json['data'] != null ? Data.fromJson(json['data']) : null;
   }
+
+  Stats get getStatus => data!.attributes!.stats!;
+
+  String get getDateTime =>
+      DateTimeUtils.convertIntToDateTime(number: data!.attributes!.date!);
 }
