@@ -8,7 +8,7 @@ abstract class ScanUrlProvider {
 }
 
 @Injectable(as: ScanUrlProvider)
-class ScanUrlProviderImpl extends ScanUrlProvider {
+class ScanUrlProviderImpl implements ScanUrlProvider {
   @override
   Future<String> getIdScanUrl({required String url}) async {
     try {

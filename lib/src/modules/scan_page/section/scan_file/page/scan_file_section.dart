@@ -7,7 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get_it/get_it.dart';
 import 'package:virusscanapp/src/data/repositories/local/file_picker_repo.dart';
 import 'package:virusscanapp/src/l10n/app_localizations.dart';
-import 'package:virusscanapp/src/modules/section/scan_file/bloc/scan_file_bloc.dart';
+import 'package:virusscanapp/src/modules/scan_page/section/scan_file/bloc/scan_file_bloc.dart';
 import 'package:virusscanapp/src/widgets/privacy_terms.dart';
 import 'package:virusscanapp/src/theme/assets.gen.dart';
 import 'package:virusscanapp/src/widgets/custom_button.dart';

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:virusscanapp/src/constants/text_constant.dart';
-import 'package:virusscanapp/src/modules/section/scan_file/page/scan_file_section.dart';
-import 'package:virusscanapp/src/modules/section/scan_ip_address/page/scan_ip_address_section.dart';
-import 'package:virusscanapp/src/modules/section/scan_url/page/scan_url_section.dart';
+import 'package:virusscanapp/src/modules/scan_page/section/scan_file/page/scan_file_section.dart';
+import 'package:virusscanapp/src/modules/scan_page/section/scan_ip_address/page/scan_ip_address_section.dart';
+import 'package:virusscanapp/src/modules/scan_page/section/scan_url/page/scan_url_section.dart';
 import 'package:virusscanapp/src/widgets/custom_tab_bar.dart';
 import 'package:virusscanapp/src/widgets/custom_tab_bar_child.dart';
 

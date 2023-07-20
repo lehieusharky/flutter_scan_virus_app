@@ -7,7 +7,7 @@ abstract class ScanUrlRepository {
 }
 
 @Injectable(as: ScanUrlRepository)
-class ScanUrlRepositoryImpl extends ScanUrlRepository {
+class ScanUrlRepositoryImpl implements ScanUrlRepository {
   final ScanUrlProvider _scanUrlProvider = GetIt.I.get<ScanUrlProvider>();
 
   @override

@@ -9,7 +9,7 @@ abstract class ScanFileRepository {
 }
 
 @Injectable(as: ScanFileRepository)
-class ScanFileRepositoryImpl extends ScanFileRepository {
+class ScanFileRepositoryImpl implements ScanFileRepository {
   final ScanFileProvider _scanFileProvider = GetIt.I.get<ScanFileProvider>();
 
   @override
