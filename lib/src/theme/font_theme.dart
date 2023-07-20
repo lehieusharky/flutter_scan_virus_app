@@ -9,6 +9,11 @@ class FontTheme {
     fontWeight: FontWeight.w700,
     color: ColorTheme.scienceBlue,
   );
+  static TextStyle scienceBlue25W700Inter = GoogleFonts.inter(
+    fontSize: 25.sp,
+    fontWeight: FontWeight.w700,
+    color: ColorTheme.scienceBlue,
+  );
 
   static TextStyle scienceBlue15W700Inter = GoogleFonts.inter(
     fontSize: 15.sp,
@@ -39,5 +44,39 @@ class FontTheme {
     color: ColorTheme.shark,
   );
 
+  static TextStyle radicalRed15W500Inter = GoogleFonts.inter(
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w500,
+    color: ColorTheme.radicalRed,
+  );
 
+  static TextStyle radicalRed20W500Inter = GoogleFonts.inter(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w500,
+    color: ColorTheme.radicalRed,
+  );
+
+  static TextStyle radicalRed40W700Inter = GoogleFonts.inter(
+    fontSize: 40.sp,
+    fontWeight: FontWeight.w700,
+    color: ColorTheme.radicalRed,
+  );
+
+  static TextStyle brightGreen20W700Inter = GoogleFonts.inter(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w700,
+    color: ColorTheme.brightGreen,
+  );
+
+  static TextStyle brightGreen20W500Inter = GoogleFonts.inter(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w500,
+    color: ColorTheme.brightGreen,
+  );
+
+  static TextStyle brightGreen40W700Inter = GoogleFonts.inter(
+    fontSize: 40.sp,
+    fontWeight: FontWeight.w700,
+    color: ColorTheme.brightGreen,
+  );
 }

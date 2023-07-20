@@ -17,7 +17,7 @@ class CustomTabBar extends StatefulWidget implements PreferredSizeWidget {
   State<CustomTabBar> createState() => _CustomTabBarState();
 
   @override
-  Size get preferredSize => Size.fromHeight(100.h);
+  Size get preferredSize => Size.fromHeight(10.h);
 }
 
 class _CustomTabBarState extends State<CustomTabBar> {

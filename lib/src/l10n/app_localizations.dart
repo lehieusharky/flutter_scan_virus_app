@@ -146,6 +146,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'IP address'**
   String get ipAddress;
+
+  /// No description provided for @summary.
+  ///
+  /// In en, this message translates to:
+  /// **'Summary'**
+  String get summary;
+
+  /// No description provided for @detection.
+  ///
+  /// In en, this message translates to:
+  /// **'Detection'**
+  String get detection;
+
+  /// No description provided for @details.
+  ///
+  /// In en, this message translates to:
+  /// **'Details'**
+  String get details;
+
+  /// No description provided for @noMaliciousNotification.
+  ///
+  /// In en, this message translates to:
+  /// **'No security vendors flagged as malicious'**
+  String get noMaliciousNotification;
+
+  /// No description provided for @haveMaliciousNotification.
+  ///
+  /// In en, this message translates to:
+  /// **' security vendor flagged as malicious'**
+  String get haveMaliciousNotification;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

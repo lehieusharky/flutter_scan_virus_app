@@ -1,13 +1,14 @@
-import 'dart:developer';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get_it/get_it.dart';
+import 'package:go_router/go_router.dart';
 import 'package:virusscanapp/src/data/repositories/local/file_picker_repo.dart';
 import 'package:virusscanapp/src/l10n/app_localizations.dart';
 import 'package:virusscanapp/src/modules/scan_page/section/scan_file/bloc/scan_file_bloc.dart';
+import 'package:virusscanapp/src/route/route_path.dart';
 import 'package:virusscanapp/src/widgets/privacy_terms.dart';
 import 'package:virusscanapp/src/theme/assets.gen.dart';
 import 'package:virusscanapp/src/widgets/custom_button.dart';
@@ -28,7 +29,8 @@ class _ScanFileSectionState extends State<ScanFileSection> {
       child: BlocConsumer<ScanFileBloc, ScanFileState>(
         listener: (context, state) {
           if (state is ScanFileGetIdSuccess) {
-            log(state.id);
+            final String id = state.id;
+            context.go("${RoutePath.analysisPage}?id=$id");
           }
         },
         builder: (context, state) {

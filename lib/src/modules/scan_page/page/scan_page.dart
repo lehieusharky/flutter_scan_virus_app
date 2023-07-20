@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:virusscanapp/src/constants/text_constant.dart';
 import 'package:virusscanapp/src/modules/scan_page/section/scan_file/page/scan_file_section.dart';
 import 'package:virusscanapp/src/modules/scan_page/section/scan_ip_address/page/scan_ip_address_section.dart';
@@ -14,7 +13,7 @@ class ScanPage extends StatefulWidget {
   State<ScanPage> createState() => _ScanPageState();
 }
 
-class _ScanPageState extends State<ScanPage> with TickerProviderStateMixin  {
+class _ScanPageState extends State<ScanPage> with TickerProviderStateMixin {
   late final TabController _tabController;
 
   @override
@@ -36,7 +35,6 @@ class _ScanPageState extends State<ScanPage> with TickerProviderStateMixin  {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 100.h),
         CustomTabBar(
           tabController: _tabController,
           tabs: const [

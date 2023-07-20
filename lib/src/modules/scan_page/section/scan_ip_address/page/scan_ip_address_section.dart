@@ -13,29 +13,31 @@ class ScanIPAddressSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(height: 70.h),
-        GestureDetector(
-          onTap: () => _scanIPAddress(context),
-          child: Assets.icons.ipIcon.image(
-            width: 170.w,
-            height: 200.h,
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          SizedBox(height: 70.h),
+          GestureDetector(
+            onTap: () => _scanIPAddress(context),
+            child: Assets.icons.ipIcon.image(
+              width: 170.w,
+              height: 200.h,
+            ),
           ),
-        ),
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20.w),
-          child: FormScanIPAddress(
-            formKey: _formKey,
-            ipAddressController: _ipAddressController,
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20.w),
+            child: FormScanIPAddress(
+              formKey: _formKey,
+              ipAddressController: _ipAddressController,
+            ),
           ),
-        ),
-        SizedBox(height: 10.h),
-        CustomButton(
-          onPressed: () => _scanIPAddress(context),
-          content: AppLocalizations.of(context)!.search,
-        ),
-      ],
+          SizedBox(height: 10.h),
+          CustomButton(
+            onPressed: () => _scanIPAddress(context),
+            content: AppLocalizations.of(context)!.search,
+          ),
+        ],
+      ),
     );
   }
 

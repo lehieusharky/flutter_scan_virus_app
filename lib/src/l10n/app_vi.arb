@@ -7,5 +7,10 @@
    "uploadFileFailedMessage": "Kiểm tra mạng hoặc tệp tin của bạn!",
    "urlOfWebsite": "Đường dẫn của trang web",
    "search": "Tìm kiếm",
-   "ipAddress": "Địa chỉ IP"
+   "ipAddress": "Địa chỉ IP",
+   "summary": "Tóm tắt",
+   "detection": "Phát hiện",
+   "details": "Thông tin",
+   "noMaliciousNotification": "Không có nhà cung cấp bảo mật nào gắn cờ là độc hại",
+   "haveMaliciousNotification": " nhà cung cấp bảo mật đã gắn cờ là độc hại."
 }

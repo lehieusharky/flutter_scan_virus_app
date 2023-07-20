@@ -30,4 +30,19 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get ipAddress => 'Địa chỉ IP';
+
+  @override
+  String get summary => 'Tóm tắt';
+
+  @override
+  String get detection => 'Phát hiện';
+
+  @override
+  String get details => 'Thông tin';
+
+  @override
+  String get noMaliciousNotification => 'Không có nhà cung cấp bảo mật nào gắn cờ là độc hại';
+
+  @override
+  String get haveMaliciousNotification => ' nhà cung cấp bảo mật đã gắn cờ là độc hại.';
 }

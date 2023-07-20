@@ -30,4 +30,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get ipAddress => 'IP address';
+
+  @override
+  String get summary => 'Summary';
+
+  @override
+  String get detection => 'Detection';
+
+  @override
+  String get details => 'Details';
+
+  @override
+  String get noMaliciousNotification => 'No security vendors flagged as malicious';
+
+  @override
+  String get haveMaliciousNotification => ' security vendor flagged as malicious';
 }
