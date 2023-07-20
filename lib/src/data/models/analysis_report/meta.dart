@@ -1,4 +1,4 @@
-import 'package:virusscanapp/src/data/models/file/file_info_model.dart';
+import 'package:virusscanapp/src/data/models/analysis_report/file_info_model.dart';
 
 class Meta {
   FileInfo? fileInfo;

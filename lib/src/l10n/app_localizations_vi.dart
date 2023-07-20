@@ -45,4 +45,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get haveMaliciousNotification => ' nhà cung cấp bảo mật đã gắn cờ là độc hại.';
+
+  @override
+  String get copied => 'Đã sao chép';
 }

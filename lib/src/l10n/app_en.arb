@@ -12,6 +12,7 @@
   "detection": "Detection",
   "details": "Details",
   "noMaliciousNotification": "No security vendors flagged as malicious",
-  "haveMaliciousNotification": " security vendor flagged as malicious"
+  "haveMaliciousNotification": " security vendor flagged as malicious",
+  "copied": "Copied"
 
 }

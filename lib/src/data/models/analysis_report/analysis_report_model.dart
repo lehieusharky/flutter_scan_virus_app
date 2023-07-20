@@ -1,5 +1,6 @@
 import 'package:virusscanapp/src/data/models/analysis_report/analysis_result.dart';
 import 'package:virusscanapp/src/data/models/analysis_report/data.dart';
+import 'package:virusscanapp/src/data/models/analysis_report/file_info_model.dart';
 import 'package:virusscanapp/src/data/models/analysis_report/meta.dart';
 import 'package:virusscanapp/src/data/models/analysis_report/stats.dart';
 import 'package:virusscanapp/src/utils/date_time_utils.dart';
@@ -25,4 +26,6 @@ class AnalysisReportModel {
 
   List<AnalysisResult> get getListAnalysisResult =>
       data!.attributes!.listAnalysisResult!;
+
+  FileInfo get getFileInfo => meta!.fileInfo!;
 }
