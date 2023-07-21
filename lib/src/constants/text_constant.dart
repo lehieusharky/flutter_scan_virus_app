@@ -18,4 +18,9 @@ class TextConstant {
   static const serialNumber = "Serial number";
   static const thumbPrintSha256 = "Thumb print sha256";
   static const thumbPrint = "Thumb print";
+  static const clean = "Clean";
+  static const unClean = "UnClean";
+  static const detected = "Detected";
+  static const unDetected = "Undetected";
+  static const harmless = "harmless";
 }
