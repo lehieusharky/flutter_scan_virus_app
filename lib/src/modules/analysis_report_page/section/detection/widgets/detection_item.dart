@@ -20,7 +20,7 @@ class DetectionItem extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         SizedBox(
-          width: MediaQuery.of(context).size.width * 0.5,
+          width: MediaQuery.of(context).size.width * 0.45,
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.w),
             child: Text(

@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:virusscanapp/src/constants/text_constant.dart';
 import 'package:virusscanapp/src/data/models/detail_model.dart';
 import 'package:virusscanapp/src/modules/analysis_report_page/section/details/widgets/detail_item.dart';
+import 'package:virusscanapp/src/modules/analysis_report_page/section/details/widgets/file_info_widget.dart';
+import 'package:virusscanapp/src/modules/analysis_report_page/section/details/widgets/ip_address_widget.dart';
+import 'package:virusscanapp/src/modules/analysis_report_page/section/details/widgets/url_info_widget.dart';
 
 class DetailsSection extends StatefulWidget {
   final DetailModel detail;
@@ -17,27 +21,17 @@ class _DetailsSectionState extends State<DetailsSection> {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 20.w),
-      child: (widget.detail.fileInfo == null)
-          ? Column(
-              children: [
-                DetailItem(
-                  title: 'URL',
-                  value: widget.detail.urlInfo!.url!,
-                ),
-                DetailItem(title: 'ID', value: widget.detail.urlInfo!.id!),
-              ],
-            )
-          : Column(
-              children: [
-                DetailItem(
-                    title: 'Size',
-                    value: widget.detail.fileInfo!.size.toString()),
-                DetailItem(title: 'Sha1', value: widget.detail.fileInfo!.sha1!),
-                DetailItem(
-                    title: 'Sha256', value: widget.detail.fileInfo!.sha256!),
-                DetailItem(title: 'Md5', value: widget.detail.fileInfo!.md5!),
-              ],
-            ),
+      child: Column(
+        children: [
+          if (widget.detail.fileInfo != null) ...[
+            FileInfoWidget(fileInfo: widget.detail.fileInfo)
+          ] else if ((widget.detail.urlInfo != null)) ...[
+            UrlInfoWidget(urlInfo: widget.detail.urlInfo)
+          ] else ...[
+            IpAddressWidget(httpCertificate: widget.detail.httpCertificate)
+          ]
+        ],
+      ),
     );
   }
 }

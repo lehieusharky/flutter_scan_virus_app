@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -8,6 +7,7 @@ import 'package:virusscanapp/src/modules/scan_page/section/scan_url/bloc/scan_ur
 import 'package:virusscanapp/src/modules/scan_page/section/scan_url/widgets/form_scan_url.dart';
 import 'package:virusscanapp/src/theme/assets.gen.dart';
 import 'package:virusscanapp/src/widgets/custom_button.dart';
+import 'package:virusscanapp/src/widgets/custom_dialog.dart';
 import 'package:virusscanapp/src/widgets/privacy_terms.dart';
 
 class ScanUrlSection extends StatelessWidget {
@@ -26,6 +26,9 @@ class ScanUrlSection extends StatelessWidget {
             final String id = state.id;
             BlocProvider.of<HomePageBloc>(context)
                 .add(HomePageGetAnalysisReport(id: id));
+          }
+          if (state is ScanUrlError) {
+            _showExceptionDialog(context);
           }
         },
         builder: (context, state) {
@@ -77,5 +80,16 @@ class ScanUrlSection extends StatelessWidget {
           .read<ScanUrlBloc>()
           .add(ScanUrlGetId(url: _urlController.text.trim()));
     }
+  }
+
+  void _showExceptionDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) => CustomDialog.exception(
+        title: AppLocalizations.of(context)!.scanUrlFailed,
+        message: AppLocalizations.of(context)!.scanFileFailedMessage,
+        context: context,
+      ),
+    );
   }
 }

@@ -48,4 +48,13 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get copied => 'Đã sao chép';
+
+  @override
+  String get scanUrlFailed => 'Kiểm tra url thất bại';
+
+  @override
+  String get scanFileFailedMessage => 'Hãy kiểm tra lại cú pháp đường dẫn.';
+
+  @override
+  String get changeLanguage => 'en';
 }

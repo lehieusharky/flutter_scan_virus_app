@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:virusscanapp/src/data/models/analysis_report/analysis_report_model.dart';
 import 'package:virusscanapp/src/modules/analysis_report_page/page/analysis_report_page.dart';
 import 'package:virusscanapp/src/modules/home_page/bloc/home_page_bloc.dart';
+import 'package:virusscanapp/src/modules/home_page/widgets/change_language.dart';
 import 'package:virusscanapp/src/modules/scan_page/page/scan_page.dart';
 import 'package:virusscanapp/src/widgets/custom_app_bar.dart';
 import 'package:virusscanapp/src/widgets/custom_arrow_back.dart';
@@ -36,6 +37,9 @@ class _HomePageState extends State<HomePage> {
         builder: (context, state) {
           return Scaffold(
             appBar: CustomAppBar(
+              action: const [
+                ChangeLanguageWidget(),
+              ],
               leading: Builder(builder: (context) {
                 if (state is HomePageGetAnalysisSuccess) {
                   return CustomArrowBackIcon(

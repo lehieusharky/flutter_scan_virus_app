@@ -13,5 +13,8 @@
    "details": "Thông tin",
    "noMaliciousNotification": "Không có nhà cung cấp bảo mật nào gắn cờ là độc hại",
    "haveMaliciousNotification": " nhà cung cấp bảo mật đã gắn cờ là độc hại.",
-   "copied": "Đã sao chép"
+   "copied": "Đã sao chép",
+   "scanUrlFailed": "Kiểm tra url thất bại",
+   "scanFileFailedMessage": "Hãy kiểm tra lại cú pháp đường dẫn.",
+    "changeLanguage": "en"
 }

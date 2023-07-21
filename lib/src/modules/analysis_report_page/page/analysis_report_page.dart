@@ -79,6 +79,7 @@ class _AnalysisReportPageState extends State<AnalysisReportPage>
         ),
         DetailsSection(
             detail: DetailModel(
+          httpCertificate: widget.analysisReportModel.getHttpCertificate,
           fileInfo: widget.analysisReportModel.getFileInfo,
           urlInfo: widget.analysisReportModel.getUrlInfo,
         ))

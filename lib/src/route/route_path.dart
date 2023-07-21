@@ -1,3 +1,3 @@
 class RoutePath {
-  static String analysisPage = "/analysis";
+  static String homePage = "/";
 }
