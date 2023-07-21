@@ -5,6 +5,10 @@ import 'package:virusscanapp/src/data/providers/remote/get_analysis_report.dart'
 
 abstract class GetAnalysisReportRepository {
   Future<AnalysisReportModel> getAnalysisReport({required String id});
+
+  Future<AnalysisReportModel> getIpAddressAnalysisReport({
+    required String ipAddress,
+  });
 }
 
 @Injectable(as: GetAnalysisReportRepository)
@@ -15,5 +19,13 @@ class GetAnalysisReportRepositoryImpl implements GetAnalysisReportRepository {
   @override
   Future<AnalysisReportModel> getAnalysisReport({required String id}) async {
     return await _analysisReportProvider.getAnalysisReport(id: id);
+  }
+
+  @override
+  Future<AnalysisReportModel> getIpAddressAnalysisReport({
+    required String ipAddress,
+  }) async {
+    return await _analysisReportProvider.getIpAddressAnalysisReport(
+        ipAddress: ipAddress);
   }
 }

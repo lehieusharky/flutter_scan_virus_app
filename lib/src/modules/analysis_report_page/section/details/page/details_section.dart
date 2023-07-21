@@ -17,27 +17,25 @@ class _DetailsSectionState extends State<DetailsSection> {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 20.w),
-      child: (widget.detail.fileInfo == null)
-          ? Column(
-              children: [
-                DetailItem(
-                  title: 'URL',
-                  value: widget.detail.urlInfo!.url!,
-                ),
-                DetailItem(title: 'ID', value: widget.detail.urlInfo!.id!),
-              ],
-            )
-          : Column(
-              children: [
-                DetailItem(
-                    title: 'Size',
-                    value: widget.detail.fileInfo!.size.toString()),
-                DetailItem(title: 'Sha1', value: widget.detail.fileInfo!.sha1!),
-                DetailItem(
-                    title: 'Sha256', value: widget.detail.fileInfo!.sha256!),
-                DetailItem(title: 'Md5', value: widget.detail.fileInfo!.md5!),
-              ],
+      child: Column(
+        children: [
+          if (widget.detail.fileInfo != null) ...[
+            DetailItem(
+              title: 'URL',
+              value: widget.detail.urlInfo!.url!,
             ),
+            DetailItem(title: 'ID', value: widget.detail.urlInfo!.id!),
+          ] else if ((widget.detail.urlInfo != null)) ...[
+            DetailItem(
+                title: 'Size', value: widget.detail.fileInfo!.size.toString()),
+            DetailItem(title: 'Sha1', value: widget.detail.fileInfo!.sha1!),
+            DetailItem(title: 'Sha256', value: widget.detail.fileInfo!.sha256!),
+            DetailItem(title: 'Md5', value: widget.detail.fileInfo!.md5!),
+          ] else ...[
+            const Text('hello')
+          ]
+        ],
+      ),
     );
   }
 }

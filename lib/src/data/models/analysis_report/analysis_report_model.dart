@@ -28,7 +28,19 @@ class AnalysisReportModel {
   List<AnalysisResult> get getListAnalysisResult =>
       data!.attributes!.listAnalysisResult!;
 
-  FileInfo? get getFileInfo => meta!.fileInfo;
+  FileInfo? get getFileInfo {
+    if (meta != null) {
+      return meta!.fileInfo;
+    } else {
+      return null;
+    }
+  }
 
-  UrlInfo? get getUrlInfo => meta!.urlInfo;
+  UrlInfo? get getUrlInfo {
+    if (meta != null) {
+      return meta!.urlInfo;
+    } else {
+      return null;
+    }
+  }
 }
