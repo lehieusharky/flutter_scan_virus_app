@@ -1,5 +1,20 @@
-# virusscanapp
 
-A new Flutter project.
+# Sharky scan
 
-flutter packages pub run build_runner build
+Mobile app for scaning file, URL and IP address
+
+## Authors
+
+- [@lehieu01675](https://www.github.com/lehieu01675)
+
+
+## Features
+
+- Scan file
+- Scan URL
+- Scan IP address
+
+
+## Documentation
+
+
