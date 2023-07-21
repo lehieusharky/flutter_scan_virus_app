@@ -1,4 +1,5 @@
 import 'package:virusscanapp/src/data/models/analysis_report/analysis_result.dart';
+import 'package:virusscanapp/src/data/models/analysis_report/http_certificate.dart';
 import 'package:virusscanapp/src/data/models/analysis_report/stats.dart';
 
 class Attributes {
@@ -6,18 +7,38 @@ class Attributes {
   String? status;
   Stats? stats;
   List<AnalysisResult>? listAnalysisResult;
+  String? asOwner;
+  HttpCertificate? httpCertificate;
 
   Attributes({
     this.date,
     this.status,
     this.stats,
+    this.httpCertificate,
     this.listAnalysisResult,
+    this.asOwner,
   });
 
   Attributes.fromJson(Map<String, dynamic> json) {
-    date = json['date'] ?? 0;
+    if (json['last_analysis_date'] != null) {
+      date = json['last_analysis_date'];
+    } else {
+      date = json['date'] ?? 0;
+    }
+    httpCertificate = json['last_https_certificate'] != null
+        ? HttpCertificate.fromJson(json['last_https_certificate'])
+        : null;
+
+    asOwner = json['as_owner'] ?? 'unknown';
     status = json['status'] ?? "unknown";
-    stats = json['stats'] != null ? Stats.fromJson(json['stats']) : null;
+    if (json['stats'] != null) {
+      stats = Stats.fromJson(json['stats']);
+    } else {
+      stats = json['last_analysis_stats'] != null
+          ? Stats.fromJson(json['last_analysis_stats'])
+          : null;
+    }
+
     listAnalysisResult = [];
     late Iterable<dynamic> listJsonValue;
     if (json['last_analysis_results'] != null) {

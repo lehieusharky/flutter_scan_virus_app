@@ -15,6 +15,21 @@ class HomePageBloc extends Bloc<HomePageEvent, HomePageState> {
   HomePageBloc() : super(HomePageInitial()) {
     on<HomePageGetAnalysisReport>(_getAnalysisReport);
     on<HomePageGetBack>(_getBack);
+    on<HomePageGetIpAddressAnalysisReport>(_getIpAddressAnalysisReport);
+  }
+
+  Future<void> _getIpAddressAnalysisReport(
+      HomePageGetIpAddressAnalysisReport event,
+      Emitter<HomePageState> emit) async {
+    emit(HomePageLoading());
+    try {
+      final AnalysisReportModel analysisReportModel =
+          await getAnalysisReportRepository.getIpAddressAnalysisReport(
+              ipAddress: event.ipAddress);
+      emit(HomePageGetAnalysisSuccess(analysisReport: analysisReportModel));
+    } catch (e) {
+      emit(HomePageError(message: e.toString()));
+    }
   }
 
   Future<void> _getAnalysisReport(

@@ -120,7 +120,7 @@ abstract class AppLocalizations {
   /// No description provided for @uploadFileFailed.
   ///
   /// In en, this message translates to:
-  /// **'Upload file Failed'**
+  /// **'Upload file failed'**
   String get uploadFileFailed;
 
   /// No description provided for @uploadFileFailedMessage.
@@ -182,6 +182,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Copied'**
   String get copied;
+
+  /// No description provided for @scanUrlFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Scan Url failed'**
+  String get scanUrlFailed;
+
+  /// No description provided for @scanFileFailedMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Please double check the path syntax.'**
+  String get scanFileFailedMessage;
+
+  /// No description provided for @changeLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'vi'**
+  String get changeLanguage;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

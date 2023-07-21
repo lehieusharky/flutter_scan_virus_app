@@ -21,12 +21,12 @@ class ChartSummaryWidget extends StatelessWidget {
           series: <CircularSeries>[
             RadialBarSeries<SummaryModel, String>(
               dataSource: listStatus,
-              maximumValue: listStatus[0].getMalicious * 1.0,
+              maximumValue: listStatus[0].getTotal * 1.0,
               trackColor: ColorTheme.brightGreen,
               cornerStyle: CornerStyle.bothFlat,
               enableTooltip: true,
               xValueMapper: (SummaryModel data, _) => data.datetime,
-              yValueMapper: (SummaryModel data, _) => data.getTotal,
+              yValueMapper: (SummaryModel data, _) => data.getMalicious,
             )
           ],
         ),

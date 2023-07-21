@@ -19,7 +19,7 @@ class FormScanIPAddress extends StatelessWidget {
       child: CustomTextFormField(
         autoFocus: true,
         controller: ipAddressController,
-        keyboardType: TextInputType.text,
+        keyboardType: TextInputType.number,
         hintText: AppLocalizations.of(context)!.ipAddress,
       ),
     );

@@ -1,6 +1,7 @@
 import 'package:virusscanapp/src/data/models/analysis_report/analysis_result.dart';
 import 'package:virusscanapp/src/data/models/analysis_report/data.dart';
 import 'package:virusscanapp/src/data/models/analysis_report/file_info.dart';
+import 'package:virusscanapp/src/data/models/analysis_report/http_certificate.dart';
 import 'package:virusscanapp/src/data/models/analysis_report/meta.dart';
 import 'package:virusscanapp/src/data/models/analysis_report/stats.dart';
 import 'package:virusscanapp/src/data/models/analysis_report/url_info.dart';
@@ -28,7 +29,21 @@ class AnalysisReportModel {
   List<AnalysisResult> get getListAnalysisResult =>
       data!.attributes!.listAnalysisResult!;
 
-  FileInfo? get getFileInfo => meta!.fileInfo;
+  HttpCertificate get getHttpCertificate => data!.attributes!.httpCertificate!;
 
-  UrlInfo? get getUrlInfo => meta!.urlInfo;
+  FileInfo? get getFileInfo {
+    if (meta != null) {
+      return meta!.fileInfo;
+    } else {
+      return null;
+    }
+  }
+
+  UrlInfo? get getUrlInfo {
+    if (meta != null) {
+      return meta!.urlInfo;
+    } else {
+      return null;
+    }
+  }
 }
