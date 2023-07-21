@@ -4,7 +4,10 @@ class SummaryModel {
   final Stats status;
   final String datetime;
 
-  SummaryModel({required this.status, required this.datetime});
+  SummaryModel({
+    required this.status,
+    required this.datetime,
+  });
 
   int get getMalicious => status.malicious ?? 0;
 

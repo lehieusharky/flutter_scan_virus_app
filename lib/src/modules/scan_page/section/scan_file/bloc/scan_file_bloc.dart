@@ -5,10 +5,12 @@ import 'package:get_it/get_it.dart';
 import 'package:virusscanapp/src/data/repositories/remote/scan_file_repo.dart';
 
 part 'scan_file_event.dart';
+
 part 'scan_file_state.dart';
 
 class ScanFileBloc extends Bloc<ScanFileEvent, ScanFileState> {
   ScanFileRepository scanFileRepository = GetIt.I.get<ScanFileRepository>();
+
   ScanFileBloc() : super(ScanFileInitial()) {
     on<ScanFileGetId>(_getId);
   }

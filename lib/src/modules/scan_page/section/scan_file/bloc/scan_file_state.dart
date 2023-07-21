@@ -15,6 +15,7 @@ class ScanFileGetIdSuccess extends ScanFileState {
   final String id;
 
   const ScanFileGetIdSuccess({required this.id});
+
   @override
   List<Object> get props => [id];
 }
@@ -23,6 +24,7 @@ class ScanFileError extends ScanFileState {
   final String message;
 
   const ScanFileError({required this.message});
+
   @override
   List<Object> get props => [message];
 }
