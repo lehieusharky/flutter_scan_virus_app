@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -27,9 +25,7 @@ class _HomePageState extends State<HomePage> {
       create: (context) => HomePageBloc(),
       child: BlocConsumer<HomePageBloc, HomePageState>(
         listener: (context, state) {
-          if (state is HomePageError) {
-            log(state.message);
-          }
+          if (state is HomePageError) {}
           if (state is HomePageGetAnalysisSuccess) {
             analysisReportModel = state.analysisReport;
           }

@@ -29,7 +29,7 @@ class AnalysisReportModel {
   List<AnalysisResult> get getListAnalysisResult =>
       data!.attributes!.listAnalysisResult!;
 
-  HttpCertificate get getHttpCertificate => data!.attributes!.httpCertificate!;
+  HttpCertificate? get getHttpCertificate => data!.attributes!.httpCertificate;
 
   FileInfo? get getFileInfo {
     if (meta != null) {
