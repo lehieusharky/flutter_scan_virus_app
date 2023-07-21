@@ -1,3 +1,21 @@
 {
-  "uploadFile": "Upload file"
+  "uploadFile": "Upload file",
+  "scanFilePrivacy1": "By submitting data above, you are agreeing to our ",
+  "scanFilePrivacy2": "Terms of Service and Privacy Policy. ",
+  "scanFilePrivacy3": "Please do not submit any personal information. VirusTotal is not responsible for the contents of your submission.",
+  "uploadFileFailed": "Upload file failed",
+  "uploadFileFailedMessage": "Check your Internet or your file again!",
+  "urlOfWebsite": "URL of the website",
+  "search": "Search",
+  "ipAddress": "IP address",
+  "summary": "Summary",
+  "detection": "Detection",
+  "details": "Details",
+  "noMaliciousNotification": "No security vendors flagged as malicious",
+  "haveMaliciousNotification": " security vendor flagged as malicious",
+  "copied": "Copied",
+  "scanUrlFailed": "Scan Url failed",
+  "scanFileFailedMessage": "Please double check the path syntax.",
+  "changeLanguage": "vi"
+
 }

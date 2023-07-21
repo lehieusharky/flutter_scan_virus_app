@@ -98,6 +98,108 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Upload file'**
   String get uploadFile;
+
+  /// No description provided for @scanFilePrivacy1.
+  ///
+  /// In en, this message translates to:
+  /// **'By submitting data above, you are agreeing to our '**
+  String get scanFilePrivacy1;
+
+  /// No description provided for @scanFilePrivacy2.
+  ///
+  /// In en, this message translates to:
+  /// **'Terms of Service and Privacy Policy. '**
+  String get scanFilePrivacy2;
+
+  /// No description provided for @scanFilePrivacy3.
+  ///
+  /// In en, this message translates to:
+  /// **'Please do not submit any personal information. VirusTotal is not responsible for the contents of your submission.'**
+  String get scanFilePrivacy3;
+
+  /// No description provided for @uploadFileFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Upload file failed'**
+  String get uploadFileFailed;
+
+  /// No description provided for @uploadFileFailedMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Check your Internet or your file again!'**
+  String get uploadFileFailedMessage;
+
+  /// No description provided for @urlOfWebsite.
+  ///
+  /// In en, this message translates to:
+  /// **'URL of the website'**
+  String get urlOfWebsite;
+
+  /// No description provided for @search.
+  ///
+  /// In en, this message translates to:
+  /// **'Search'**
+  String get search;
+
+  /// No description provided for @ipAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'IP address'**
+  String get ipAddress;
+
+  /// No description provided for @summary.
+  ///
+  /// In en, this message translates to:
+  /// **'Summary'**
+  String get summary;
+
+  /// No description provided for @detection.
+  ///
+  /// In en, this message translates to:
+  /// **'Detection'**
+  String get detection;
+
+  /// No description provided for @details.
+  ///
+  /// In en, this message translates to:
+  /// **'Details'**
+  String get details;
+
+  /// No description provided for @noMaliciousNotification.
+  ///
+  /// In en, this message translates to:
+  /// **'No security vendors flagged as malicious'**
+  String get noMaliciousNotification;
+
+  /// No description provided for @haveMaliciousNotification.
+  ///
+  /// In en, this message translates to:
+  /// **' security vendor flagged as malicious'**
+  String get haveMaliciousNotification;
+
+  /// No description provided for @copied.
+  ///
+  /// In en, this message translates to:
+  /// **'Copied'**
+  String get copied;
+
+  /// No description provided for @scanUrlFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Scan Url failed'**
+  String get scanUrlFailed;
+
+  /// No description provided for @scanFileFailedMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Please double check the path syntax.'**
+  String get scanFileFailedMessage;
+
+  /// No description provided for @changeLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'vi'**
+  String get changeLanguage;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

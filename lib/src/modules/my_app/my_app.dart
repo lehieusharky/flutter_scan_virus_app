@@ -1,44 +1,70 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:virusscanapp/src/constants/text_constant.dart';
 import 'package:virusscanapp/src/l10n/app_localizations.dart';
-import 'package:virusscanapp/src/modules/home_page/page/home_page.dart';
-import 'package:virusscanapp/src/theme/color_theme.dart';
+import 'package:virusscanapp/src/modules/my_app/bloc/my_app_bloc.dart';
+import 'package:virusscanapp/src/route/app_router.dart';
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
   @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  String _languageCode = TextConstant.vi;
+
+  @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: const Size(390, 840),
-      minTextAdapt: true,
-      splitScreenMode: true,
-      builder: (context, child) => _buildMaterialApp(context),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: ((context) => MyAppBloc())),
+      ],
+      child: ScreenUtilInit(
+        designSize: const Size(369, 844),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (context, child) {
+          return BlocConsumer<MyAppBloc, MyAppState>(
+            listener: (context, state) {
+              if (state is MyAppGetDefaultLanguageSuccess) {
+                _languageCode = state.languageCode;
+              }
+              if (state is MyAppUpdateLanguageSuccess) {
+                _languageCode = state.languageCode;
+              }
+            },
+            builder: (context, state) {
+              return _buildMaterialApp(context);
+            },
+          );
+        },
+      ),
     );
   }
 
   MaterialApp _buildMaterialApp(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerDelegate: AppRouter.router.routerDelegate,
+      routeInformationProvider: AppRouter.router.routeInformationProvider,
+      routeInformationParser: AppRouter.router.routeInformationParser,
       debugShowCheckedModeBanner: false,
-      title: TextConstant.titleApp,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: ColorTheme.scienceBlue),
-        useMaterial3: true,
-      ),
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      locale: const Locale("vi"),
+      locale: Locale(_languageCode),
       supportedLocales: const [
         Locale(TextConstant.en),
         Locale(TextConstant.vi),
       ],
-      home: const HomePage(),
+      theme: ThemeData.light(),
+      title: TextConstant.titleApp,
     );
   }
 }

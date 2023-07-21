@@ -110,13 +110,13 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         autofocus: widget.autoFocus ?? false,
         validator: widget.validator,
         textInputAction: widget.textInputAction,
-        style: FontTheme.shark15W500Poppins,
+        style: FontTheme.shark15W500Inter,
         autovalidateMode: widget.autoValidateMode,
         keyboardType: widget.keyboardType,
         onChanged: widget.onChanged,
         decoration: InputDecoration(
           prefixIcon: widget.prefixIcon,
-          errorStyle: FontTheme.red12W400Poppins,
+          errorStyle: FontTheme.red12W400Inter,
           suffixIcon: (prefixIcon == const Icon(Icons.password))
               ? IconButton(
                   onPressed: () => _onPressed(),
@@ -127,7 +127,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
           fillColor: ColorTheme.white,
           filled: true,
           hintText: widget.hintText,
-          hintStyle: FontTheme.scienceBlue20W700Inter,
+          hintStyle: FontTheme.shark12W500Inter,
           border: OutlineInputBorder(
             borderSide: BorderSide.none,
             borderRadius: BorderRadius.all(Radius.circular(15.r)),
