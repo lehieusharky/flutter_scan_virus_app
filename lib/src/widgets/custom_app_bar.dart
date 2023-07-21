@@ -32,7 +32,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
     return AppBar(
       bottom: widget.bottom,
       elevation: 0,
-      toolbarHeight: 60,
+      toolbarHeight: 70,
       centerTitle: true,
       backgroundColor: widget.backgroundColor,
       leading: widget.leading,

@@ -1,9 +1,9 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:virusscanapp/src/l10n/app_localizations.dart';
+import 'package:virusscanapp/src/modules/home_page/bloc/home_page_bloc.dart';
 import 'package:virusscanapp/src/modules/scan_page/section/scan_url/bloc/scan_url_bloc.dart';
 import 'package:virusscanapp/src/modules/scan_page/section/scan_url/widgets/form_scan_url.dart';
 import 'package:virusscanapp/src/theme/assets.gen.dart';
@@ -23,38 +23,49 @@ class ScanUrlSection extends StatelessWidget {
       child: BlocConsumer<ScanUrlBloc, ScanUrlState>(
         listener: (context, state) {
           if (state is ScanUrlGetIdSuccess) {
-            log(state.id);
+            final String id = state.id;
+            BlocProvider.of<HomePageBloc>(context)
+                .add(HomePageGetAnalysisReport(id: id));
           }
         },
         builder: (context, state) {
-          return SingleChildScrollView(
-            child: Column(
-              children: [
-                SizedBox(height: 70.h),
-                GestureDetector(
-                  onTap: () => _scanUrl(context),
-                  child: Assets.icons.urlIcon.image(
-                    width: 170.w,
-                    height: 200.h,
+          if (state is ScanUrlLoading) {
+            return Padding(
+              padding: EdgeInsets.symmetric(horizontal: 30.w),
+              child: const Center(
+                child: LinearProgressIndicator(),
+              ),
+            );
+          } else {
+            return SingleChildScrollView(
+              child: Column(
+                children: [
+                  SizedBox(height: 70.h),
+                  GestureDetector(
+                    onTap: () => _scanUrl(context),
+                    child: Assets.icons.urlIcon.image(
+                      width: 170.w,
+                      height: 200.h,
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20.w),
-                  child: FormScanUrl(
-                    formKey: _formKey,
-                    urlController: _urlController,
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20.w),
+                    child: FormScanUrl(
+                      formKey: _formKey,
+                      urlController: _urlController,
+                    ),
                   ),
-                ),
-                SizedBox(height: 10.h),
-                CustomButton(
-                  onPressed: () => _scanUrl(context),
-                  content: AppLocalizations.of(context)!.search,
-                ),
-                SizedBox(height: 30.h),
-                const PrivacyAndTermsWidget(),
-              ],
-            ),
-          );
+                  SizedBox(height: 10.h),
+                  CustomButton(
+                    onPressed: () => _scanUrl(context),
+                    content: AppLocalizations.of(context)!.search,
+                  ),
+                  SizedBox(height: 30.h),
+                  const PrivacyAndTermsWidget(),
+                ],
+              ),
+            );
+          }
         },
       ),
     );
