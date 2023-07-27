@@ -1,7 +1,7 @@
 name: virusscanapp
 description: A new Flutter project.
 publish_to: 'none'
-version: 1.0.0+1
+version: 1.0.3
 
 environment:
   sdk: '>=3.0.5 <4.0.0'
@@ -24,6 +24,8 @@ dependencies:
   file_picker: ^5.3.2
   syncfusion_flutter_charts: ^22.1.39
   shared_preferences: ^2.2.0
+  flutter_launcher_icons: ^0.13.1
+  rename: ^2.1.1
   flutter_localizations:
     sdk: flutter
   intl: any
@@ -37,6 +39,10 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^2.0.0
 
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/scanner.png"
 
 flutter_gen:
   output: lib/src/theme
@@ -55,3 +61,4 @@ flutter:
   assets:
     - .env
     - assets/icons/
+    - assets/images/

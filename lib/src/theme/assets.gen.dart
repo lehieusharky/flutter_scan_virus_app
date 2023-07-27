@@ -26,10 +26,21 @@ class $AssetsIconsGen {
   List<AssetGenImage> get values => [ipIcon, uploadFileIcon, urlIcon];
 }
 
+class $AssetsImagesGen {
+  const $AssetsImagesGen();
+
+  /// File path: assets/images/scanner.png
+  AssetGenImage get scanner => const AssetGenImage('assets/images/scanner.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [scanner];
+}
+
 class Assets {
   Assets._();
 
   static const $AssetsIconsGen icons = $AssetsIconsGen();
+  static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 
 class AssetGenImage {

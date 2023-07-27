@@ -30,7 +30,6 @@ class AnalysisReportModel {
       data!.attributes!.listAnalysisResult!;
 
   HttpCertificate? get getHttpCertificate => data!.attributes!.httpCertificate;
-
   FileInfo? get getFileInfo {
     if (meta != null) {
       return meta!.fileInfo;

@@ -10,13 +10,12 @@ class ChangeLanguageWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {
-        BlocProvider.of<MyAppBloc>(context).add(MyAppUpdateLanguage());
-      },
-      child: Text(
-        AppLocalizations.of(context)!.changeLanguage,
-        style: FontTheme.scienceBlue15W700Inter,
-      ),
-    );
+        onPressed: () {
+          BlocProvider.of<MyAppBloc>(context).add(MyAppUpdateLanguage());
+        },
+        child: Text(
+          AppLocalizations.of(context)!.changeLanguage,
+          style: FontTheme.scienceBlue15W700Inter,
+        ),);
   }
 }

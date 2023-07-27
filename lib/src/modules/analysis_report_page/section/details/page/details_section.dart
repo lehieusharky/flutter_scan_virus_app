@@ -5,23 +5,28 @@ import 'package:virusscanapp/src/modules/analysis_report_page/section/details/wi
 import 'package:virusscanapp/src/modules/analysis_report_page/section/details/widgets/ip_address_widget.dart';
 import 'package:virusscanapp/src/modules/analysis_report_page/section/details/widgets/url_info_widget.dart';
 
-class DetailsSection extends StatelessWidget {
+class DetailsSection extends StatefulWidget {
   final DetailModel detail;
 
   const DetailsSection({super.key, required this.detail});
 
+  @override
+  State<DetailsSection> createState() => _DetailsSectionState();
+}
+
+class _DetailsSectionState extends State<DetailsSection> {
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 20.w),
       child: Column(
         children: [
-          if (detail.fileInfo != null) ...[
-            FileInfoWidget(fileInfo: detail.fileInfo)
-          ] else if ((detail.urlInfo != null)) ...[
-            UrlInfoWidget(urlInfo: detail.urlInfo)
+          if (widget.detail.fileInfo != null) ...[
+            FileInfoWidget(fileInfo: widget.detail.fileInfo)
+          ] else if ((widget.detail.urlInfo != null)) ...[
+            UrlInfoWidget(urlInfo: widget.detail.urlInfo)
           ] else ...[
-            IpAddressWidget(httpCertificate: detail.httpCertificate)
+            IpAddressWidget(httpCertificate: widget.detail.httpCertificate)
           ]
         ],
       ),
