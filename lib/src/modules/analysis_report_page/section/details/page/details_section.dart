@@ -5,16 +5,11 @@ import 'package:virusscanapp/src/modules/analysis_report_page/section/details/wi
 import 'package:virusscanapp/src/modules/analysis_report_page/section/details/widgets/ip_address_widget.dart';
 import 'package:virusscanapp/src/modules/analysis_report_page/section/details/widgets/url_info_widget.dart';
 
-class DetailsSection extends StatefulWidget {
+class DetailsSection extends StatelessWidget {
   final DetailModel detail;
 
   const DetailsSection({super.key, required this.detail});
 
-  @override
-  State<DetailsSection> createState() => _DetailsSectionState();
-}
-
-class _DetailsSectionState extends State<DetailsSection> {
   @override
   Widget build(BuildContext context) {
     return Padding(

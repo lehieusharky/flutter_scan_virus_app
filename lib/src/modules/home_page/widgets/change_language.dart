@@ -17,5 +17,6 @@ class ChangeLanguageWidget extends StatelessWidget {
           AppLocalizations.of(context)!.changeLanguage,
           style: FontTheme.scienceBlue15W700Inter,
         ),);
+
   }
 }
