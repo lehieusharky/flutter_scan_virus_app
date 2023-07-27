@@ -7,6 +7,7 @@ Future<void> main() async {
   // dependencies injection initialization
   configureDependencies();
 
+  // environment file initialization
   await dotenv.load(fileName: ".env");
   runApp(const MyApp());
 }
