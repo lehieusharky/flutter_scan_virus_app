@@ -39,7 +39,7 @@ class Attributes {
           : null;
     }
 
-    listAnalysisResult = [];
+    listAnalysisResult = <AnalysisResult>[];
     late Iterable<dynamic> listJsonValue;
     if (json['last_analysis_results'] != null) {
       listJsonValue = json['last_analysis_results'].values;

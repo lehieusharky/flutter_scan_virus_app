@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:virusscanapp/src/constants/text_constant.dart';
 import 'package:virusscanapp/src/data/models/detail_model.dart';
-import 'package:virusscanapp/src/modules/analysis_report_page/section/details/widgets/detail_item.dart';
 import 'package:virusscanapp/src/modules/analysis_report_page/section/details/widgets/file_info_widget.dart';
 import 'package:virusscanapp/src/modules/analysis_report_page/section/details/widgets/ip_address_widget.dart';
 import 'package:virusscanapp/src/modules/analysis_report_page/section/details/widgets/url_info_widget.dart';
