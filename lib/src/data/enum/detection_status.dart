@@ -1,5 +1,3 @@
-import 'package:virusscanapp/src/constants/text_constant.dart';
-
 enum DetectionStatus {
   clean,
   unclean,
@@ -9,13 +7,13 @@ enum DetectionStatus {
   String get data {
     switch (this) {
       case DetectionStatus.clean:
-        return TextConstant.clean;
+        return 'Clean';
       case DetectionStatus.unclean:
-        return TextConstant.unClean;
+        return 'UnClean';
       case DetectionStatus.detected:
-        return TextConstant.detected;
+        return 'Detected';
       case DetectionStatus.undetected:
-        return TextConstant.unDetected;
+        return 'Undetected';
     }
   }
 }
